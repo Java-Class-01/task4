@@ -78,5 +78,15 @@ public class WorkingWithMenusPanels {
         panel.add(new JTextField());
         return panel;
     }
+    //the panel for about
+    public JPanel createAboutPanel(){
+        JPanel panel=new JPanel(new BorderLayout());
+        JTextArea aboutText=new JTextArea();
+        aboutText.setEditable(false);
+        aboutText.setMargin(new Insets(10,10,10,10));
+        panel.add(aboutText,BorderLayout.CENTER);
+        return panel;
+
+    }
 
 }
