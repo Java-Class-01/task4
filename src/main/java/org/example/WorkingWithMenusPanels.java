@@ -65,5 +65,10 @@ public class WorkingWithMenusPanels {
 
         return cardPanel;
     }
-
+//creating panel method
+    public JPanel createHomePanel(){
+        JPanel panel=new JPanel(new BorderLayout());
+        JLabel label=new JLabel("Welcome to the Home  page",SwingConstants.CENTER);
+        return panel;
+    }
 }
