@@ -71,4 +71,12 @@ public class WorkingWithMenusPanels {
         JLabel label=new JLabel("Welcome to the Home  page",SwingConstants.CENTER);
         return panel;
     }
+    //panel for settings
+    public JPanel createSettingsPanel(){
+        JPanel panel=new JPanel(new GridLayout(3,2));
+        panel.add(new JLabel("Username"));
+        panel.add(new JTextField());
+        return panel;
+    }
+
 }
