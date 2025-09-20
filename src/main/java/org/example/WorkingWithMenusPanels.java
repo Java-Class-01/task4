@@ -19,7 +19,11 @@ public class WorkingWithMenusPanels {
 
         frame = new JFrame("Swing Application with Menu and Panels");
         frame.setSize(600, 400);
+        // add components
+        frame.setJMenuBar(createMenuBar());
+        frame.add(createCardLayoutPanel());
 
+        frame.setVisible(true);
         return frame;
     }
     public JMenuBar createMenuBar() {
