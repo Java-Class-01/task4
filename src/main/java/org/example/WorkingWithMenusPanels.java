@@ -22,5 +22,30 @@ public class WorkingWithMenusPanels {
 
         return frame;
     }
+    public JMenuBar createMenuBar() {
+        menuBar = new JMenuBar();
+        // File Menu
+        JMenu fileMenu = new JMenu("File");
+        JMenuItem homeItem = new JMenuItem("Home");
+        JMenuItem settingsItem = new JMenuItem("Settings");
+        homeItem.addActionListener(e -> cardLayout.show(cardPanel, "Home"));
+        settingsItem.addActionListener(e -> cardLayout.show(cardPanel, "Settings"));
+        fileMenu.add(homeItem);
+        fileMenu.add(settingsItem);
+        // View Menu
+        JMenu viewMenu = new JMenu("View");
+        JMenuItem aboutItem = new JMenuItem("About");
+        JMenuItem exitItem = new JMenuItem("Exit");
+        exitItem.addActionListener(e -> System.exit(0));
+        aboutItem.addActionListener(e -> cardLayout.show(cardPanel, "About"));
+
+        viewMenu.add(exitItem);
+        viewMenu.add(aboutItem);
+        // Add menus to menu bar
+        menuBar.add(fileMenu);
+        menuBar.add(viewMenu);
+
+        return menuBar;
+    }
 
 }
