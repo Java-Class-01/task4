@@ -47,5 +47,19 @@ public class WorkingWithMenusPanels {
 
         return menuBar;
     }
+    // Create card layout panel with multiple views
+    public JPanel createCardLayoutPanel() {
+        cardLayout = new CardLayout();
+        cardPanel = new JPanel(cardLayout);
+
+        cardPanel.add(createHomePanel(), "Home");
+        cardPanel.add(createSettingsPanel(), "Settings");
+        cardPanel.add(createAboutPanel(), "About");
+
+        // Default view
+        cardLayout.show(cardPanel, "Home");
+
+        return cardPanel;
+    }
 
 }
